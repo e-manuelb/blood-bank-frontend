@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {AvailableDonorsForEachBloodType} from "../../../models/info/available-donors-for-each-blood-type";
 
 @Component({
   selector: 'app-available-donors-for-each-blood-type',
@@ -6,5 +7,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./available-donors-for-each-blood-type.component.scss']
 })
 export class AvailableDonorsForEachBloodTypeComponent {
-  @Input() availableDonorsForEachBloodTypes: any;
+  @Input() availableDonorsForEachBloodTypes: Array<AvailableDonorsForEachBloodType> = [];
 }

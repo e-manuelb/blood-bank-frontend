@@ -3,6 +3,10 @@ import {GetProcessedInformationService} from "../../services/info/get-processed-
 import {SavePeopleFromJSONService} from "../../services/person/save-people-from-json.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
+import {PersonQuantityForEachState} from "../../models/info/person-quantity-for-each-state";
+import {PercentageOfObeseMenAndWomen} from "../../models/info/percentage-of-obese-men-and-women";
+import {AverageAgeForEachBloodType} from "../../models/info/average-age-for-each-blood-type";
+import {AvailableDonorsForEachBloodType} from "../../models/info/available-donors-for-each-blood-type";
 
 @Component({
   selector: 'app-dashboard',
@@ -12,11 +16,11 @@ import {ToastrService} from "ngx-toastr";
 export class DashboardComponent implements OnInit {
   formJSON: FormGroup = new FormGroup({});
 
-  personQuantityForEachStates: Array<any> = [];
+  personQuantityForEachStates: Array<PersonQuantityForEachState> = [];
   averageBMIPerAges: Array<any> = [];
-  percentageOfObeseMenAndWomen: any;
-  averageAgeForEachBloodTypes: Array<any> = [];
-  availableDonorsForEachBloodTypes: Array<any> = [];
+  percentageOfObeseMenAndWomen!: PercentageOfObeseMenAndWomen;
+  averageAgeForEachBloodTypes: Array<AverageAgeForEachBloodType> = [];
+  availableDonorsForEachBloodTypes: Array<AvailableDonorsForEachBloodType> = [];
 
   constructor(
     private getProcessedInformationService: GetProcessedInformationService,
