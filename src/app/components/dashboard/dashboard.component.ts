@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   personQuantityForEachStates: Array<PersonQuantityForEachState> = [];
   averageBMIPerAges: Array<any> = [];
-  percentageOfObeseMenAndWomen!: PercentageOfObeseMenAndWomen;
+  percentageOfObeseMenAndWomen: PercentageOfObeseMenAndWomen = new PercentageOfObeseMenAndWomen(0, 0);
   averageAgeForEachBloodTypes: Array<AverageAgeForEachBloodType> = [];
   availableDonorsForEachBloodTypes: Array<AvailableDonorsForEachBloodType> = [];
 
