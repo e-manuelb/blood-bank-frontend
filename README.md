@@ -1,27 +1,24 @@
-# BloodBankFrontend
+## Welcome to the Blood Bank.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+In it, you will be able to navigate between the candidate registration and information balance functions.
 
-## Development server
+The application has just one page with all functionalities.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To consult the API documentation, see: https://github.com/e-manuelb/blood-bank-api
 
-## Code scaffolding
+To run the project, just clone the repository and change the environment variables in `src/environments/environment.ts`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```typescript
+const port = 8080; (port to change depending on your server)
 
-## Build
+export const environment = {
+  production: false,
+  title: 'Local Environment Heading',
+  apiURL: `http://localhost:${port}/api`
+}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
 
-## Running unit tests
+After this, just run `npm i` and `ng serve` to execute your application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I hope that you enjoyed.
