@@ -1,0 +1,19 @@
+<div>
+  <table class="table table-dark table-striped table-hover table-bordered table-sm">
+    <thead>
+    <tr class="table-light">
+      <th class="text-center" colspan="2">Person quantity for each state</th>
+    </tr>
+    <tr class="text-center">
+      <th>State</th>
+      <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let personQuantityForEachState of personQuantityForEachStates" class="text-center">
+      <td> {{ personQuantityForEachState?.state }}</td>
+      <td> {{ personQuantityForEachState?.quantity }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

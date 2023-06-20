@@ -1,0 +1,20 @@
+<div>
+  <table class="table table-dark table-striped table-hover table-bordered table-sm">
+    <thead>
+    <tr class="table-light">
+      <th class="text-center" colspan="2">Average age for each blood type</th>
+    </tr>
+    <tr class="text-center">
+      <th>Blood Type</th>
+      <th>Age average</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let averageAgeForEachBloodType of averageAgeForEachBloodTypes" class="text-center">
+      <td> {{ averageAgeForEachBloodType?.bloodType }}</td>
+      <td> {{ averageAgeForEachBloodType?.averageAge }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

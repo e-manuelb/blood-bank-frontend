@@ -1,0 +1,19 @@
+<div>
+  <table class="table table-dark table-striped table-hover table-bordered table-sm">
+    <thead>
+    <tr class="table-light">
+      <th class="text-center" colspan="2">Average BMI per age</th>
+    </tr>
+    <tr class="text-center">
+      <th>Age range</th>
+      <th>BMI</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let averageBMIPerAge of averageBMIPerAges | keyvalue" class="text-center">
+      <td> {{ averageBMIPerAge?.key }}</td>
+      <td> {{ averageBMIPerAge?.value }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

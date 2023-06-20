@@ -1,0 +1,39 @@
+<div class="justify-content-center container-sm">
+  <div class="mb-3">
+    <form [formGroup]="formJSON" (ngSubmit)="savePeopleFromJSON()">
+      <div class="mb-3">
+        <label for="json-input" class="form-label">People JSON</label>
+        <textarea class="form-control" id="json-input" rows="10" formControlName="data"></textarea>
+      </div>
+      <div class="text-end between">
+        <button type="button" class="btn btn-primary" (click)="formatJSON()">Format JSON</button>
+        <button type="submit" class="btn btn-success ms-2">Submit data</button>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-person-quantity-for-each-state
+        *ngIf="!!personQuantityForEachStates"
+        [personQuantityForEachStates]="personQuantityForEachStates"
+      />
+    </div>
+    <div class="col h-100">
+      <app-average-bmiper-age *ngIf="!!averageBMIPerAges" [averageBMIPerAges]="averageBMIPerAges" class="mb-2"/>
+      <app-percentage-of-obese-men-and-women
+        class="mb-2"
+        *ngIf="!!percentageOfObeseMenAndWomen"
+        [percentageOfObeseMenAndWomen]="percentageOfObeseMenAndWomen"
+      />
+      <app-average-age-for-each-blood-type
+        class="mb-2"
+        *ngIf="averageAgeForEachBloodTypes"
+        [averageAgeForEachBloodTypes]="averageAgeForEachBloodTypes"
+      />
+      <app-available-donors-for-each-blood-type
+        *ngIf="!!availableDonorsForEachBloodTypes"
+        [availableDonorsForEachBloodTypes]="availableDonorsForEachBloodTypes"
+      />
+    </div>
+  </div>
+</div>
